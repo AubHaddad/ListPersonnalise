@@ -5,7 +5,7 @@ public class Article {
     private String libelle, categorie;
 
 
-    public Article(int code, int pu, String libelle, String categorie) {
+    public Article(int code, String libelle, int pu, String categorie) {
         this.code = code;
         this.pu = pu;
         this.libelle = libelle;
@@ -15,11 +15,11 @@ public class Article {
     public Article() {
     }
 
-    public int getCode() {
+    public int getCodeArticle() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCodeArticle(int code) {
         this.code = code;
     }
 

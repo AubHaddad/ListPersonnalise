@@ -17,14 +17,17 @@ public class MainActivity extends AppCompatActivity {
 
         lst = findViewById(R.id.lstLayout);
 
-        ArrayList<Integer> lstInt = new ArrayList<Integer>();
+        ArrayList<Article> lstArt = new ArrayList<Article>();
 
-        for (int i = 0; i<30; i++){
-            lstInt.add(i);
-        }
+        lstArt.add(new Article(1, "Pain", 2, "alm"));
+        lstArt.add(new Article(2, "Lait", 8, "alm"));
+        lstArt.add(new Article(3, "Stylo", 5, "frn"));
+        lstArt.add(new Article(4, "Cahier", 10, "frn"));
+        lstArt.add(new Article(5, "Chimie", 170, "liv"));
+        lstArt.add(new Article(6, "Sucre", 15, "alm"));
 
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>
-                (getApplicationContext(), android.R.layout.simple_list_item_1, lstInt);
+        ArtAdapter adapter = new ArtAdapter
+                (getApplicationContext(), R.layout.item_art, lstArt);
         lst.setAdapter(adapter);
     }
 }
